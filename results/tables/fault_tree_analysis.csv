@@ -1,0 +1,10 @@
+Component,Probability,Birnbaum Importance
+Feature Distribution Shift,0.15,0.199994
+Concept Drift,0.2,0.149996
+GPU Failure,0.05,0.000543
+Memory Overflow,0.08,0.000339
+API Timeout,0.1,0.000272
+Dependency Failure,0.07,0.000388
+Model Failure (AND),0.03,
+Infrastructure Failure (AND),2.8e-05,
+ML System Failure (OR),0.030027,

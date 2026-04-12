@@ -1,0 +1,10 @@
+Alternative,EV ($),Scenario,Probability,Cost ($),EV Contrib
+Advanced_ML,990820.48,High_Risk,0.3,1054427.3,316328.19
+Advanced_ML,990820.48,Moderate_Risk,0.5,1012022.75,506011.38
+Advanced_ML,990820.48,Low_Risk,0.2,842404.55,168480.91
+Rule_Based,9326577.53,High_Risk,0.3,12435436.7,3730631.01
+Rule_Based,9326577.53,Moderate_Risk,0.5,10362863.92,5181431.96
+Rule_Based,9326577.53,Low_Risk,0.2,2072572.78,414514.56
+Standard_ML,3466707.8,High_Risk,0.3,4538943.74,1361683.12
+Standard_ML,3466707.8,Moderate_Risk,0.5,3824119.78,1912059.89
+Standard_ML,3466707.8,Low_Risk,0.2,964823.96,192964.79

@@ -1,0 +1,4 @@
+Model,TP,FP,FN,TN,FN_amount,FP_amount,total_direct_loss,annual_scaled_loss
+XGBoost,82,14,16,56850,2193.58,129.96,2323.54,424045.5
+LogisticRegression,90,1467,8,55397,658.61,38509.83,39168.44,7148239.57
+RuleBased,77,668,21,56196,3179.37,110386.26,113565.63,20725727.84

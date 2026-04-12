@@ -1,0 +1,16 @@
+Model,End State,Probability,Loss ($),EL Contrib
+Advanced_ML,Fraud Prevented,0.679,0,0.0
+Advanced_ML,Partial Loss,0.0357,36.66,1.3088
+Advanced_ML,Operational Loss (FP),0.122,12.22,1.4908
+Advanced_ML,Full Financial Loss,0.1633,122.21,19.9569
+Advanced_ML,--- EXPECTED LOSS PER TX ---,,,22.7565
+Standard_ML,Fraud Prevented,0.0478,0,0.0
+Standard_ML,Partial Loss,0.0053,36.66,0.1943
+Standard_ML,Operational Loss (FP),0.8653,12.22,10.574
+Standard_ML,Full Financial Loss,0.0816,122.21,9.9723
+Standard_ML,--- EXPECTED LOSS PER TX ---,,,20.7406
+Rule_Based,Fraud Prevented,0.0691,0,0.0
+Rule_Based,Partial Loss,0.0122,36.66,0.4473
+Rule_Based,Operational Loss (FP),0.7045,12.22,8.609
+Rule_Based,Full Financial Loss,0.2143,122.21,26.1896
+Rule_Based,--- EXPECTED LOSS PER TX ---,,,35.2458

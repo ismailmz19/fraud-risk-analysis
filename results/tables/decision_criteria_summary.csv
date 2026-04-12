@@ -1,0 +1,5 @@
+Criterion,Recommended Strategy
+Minimin (Optimistic),Advanced_ML
+Minimax (Conservative),Advanced_ML
+Minimax Regret,Advanced_ML
+EMV (Expected Cost),Advanced_ML
