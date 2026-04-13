@@ -48,7 +48,7 @@ https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
 - 284,807 transactions over 2 days
 - 492 fraudulent transactions (0.173% fraud rate)
-- Features V1–V28 are PCA-transformed for privacy
+- Features V1-V28 are PCA-transformed for privacy
 
 ## Installation
 
@@ -98,11 +98,13 @@ fraud_risk_analysis/
     └── figures/                         # Output PNG figures
 ```
 
-## Course
-
-INSE 6320 — Risk Analysis for Information and Systems Engineering  
-Concordia University, Montreal, Quebec, Canada
-
 ## Author
 
-Ismail Mzouri — Student ID: 40335670
+| | |
+|---|---|
+| **Name** | Ismail Mzouri |
+| **Student ID** | 40335670 |
+| **Course** | INSE 6320 — Risk Analysis for Information and Systems Engineering |
+| **Department** | Information Systems Engineering |
+| **University** | Concordia University, Montreal, Quebec, Canada |
+| **Semester** | Winter 2026 |
