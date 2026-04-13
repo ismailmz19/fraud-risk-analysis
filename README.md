@@ -1,118 +1,108 @@
-lines = [
-    "# Fraud Detection Deployment Risk Analysis",
-    "",
-    "A comprehensive quantitative risk analysis of three fraud detection deployment strategies for a fintech company, using the Kaggle Credit Card Fraud Detection dataset.",
-    "",
-    "## Project Overview",
-    "",
-    "This project applies formal risk analysis methods to determine the optimal fraud detection system deployment strategy.",
-    "All financial loss parameters are derived directly from real transaction amounts in the dataset — not assumed values.",
-    "",
-    "Three alternatives are evaluated:",
-    "",
-    "| Strategy | Model | Annual Cost |",
-    "|----------|-------|-------------|",
-    "| Advanced ML | XGBoost + SMOTE + threshold optimization | $800,000 |",
-    "| Standard ML | Logistic Regression + SMOTE | $250,000 |",
-    "| Rule-Based | Manual threshold rules | $0 |",
-    "",
-    "## Key Results",
-    "",
-    "All 4 decision criteria unanimously recommend **Advanced ML (XGBoost)**:",
-    "",
-    "| Criterion | Result |",
-    "|-----------|--------|",
-    "| Minimin | Advanced ML — $842,405 best case |",
-    "| Minimax | Advanced ML — $1,054,427 worst case |",
-    "| Minimax Regret | Advanced ML — $0 regret in every scenario |",
-    "| EMV | Advanced ML — $990,820 expected annual cost |",
-    "| EVPI | $0 — decision is fully robust |",
-    "| Risk Premium | $1,437 — near-zero uncertainty |",
-    "| Sensitivity | No breakeven found across full probability range |",
-    "",
-    "## Analyses Included",
-    "",
-    "- Quantitative Risk Analysis (SLE, ALE, ARO)",
-    "- Influence Diagram",
-    "- Decision Criteria (Minimin, Minimax, Minimax Regret, EMV)",
-    "- EVPI and EVSI",
-    "- Decision Tree",
-    "- Risk Profiles",
-    "- Sensitivity Analysis",
-    "- Event Tree Analysis",
-    "- Fault Tree Analysis (AND/OR gates, Birnbaum importance)",
-    "- Risk Utility Analysis (exponential utility, certainty equivalent, risk premium)",
-    "- Probability Analysis and Bayesian Updating",
-    "",
-    "## Dataset",
-    "",
-    "Download the Kaggle Credit Card Fraud Detection dataset and place it at `data/creditcard.csv`:",
-    "",
-    "https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud",
-    "",
-    "- 284,807 transactions over 2 days",
-    "- 492 fraudulent transactions (0.173% fraud rate)",
-    "- Features V1-V28 are PCA-transformed for privacy",
-    "",
-    "## Installation",
-    "",
-    "```bash",
-    "pip install numpy pandas matplotlib seaborn scipy scikit-learn xgboost imbalanced-learn joblib",
-    "```",
-    "",
-    "## Usage",
-    "",
-    "Run the full pipeline with a single command:",
-    "",
-    "```bash",
-    "python main.py",
-    "```",
-    "",
-    "This runs all 13 analysis phases and generates:",
-    "- `results/tables/` — 13 CSV output tables",
-    "- `results/figures/` — 15 PNG figures",
-    "",
-    "## Project Structure",
-    "",
-    "```",
-    "fraud_risk_analysis/",
-    "├── main.py                              # Master execution script (13 phases)",
-    "├── src/",
-    "│   ├── ml/",
-    "│   │   └── train_models.py              # Train XGBoost, Logistic Regression, Rule-Based",
-    "│   ├── risk_analysis/",
-    "│   │   ├── quantitative.py              # SLE, ALE, ARO, payoff table",
-    "│   │   ├── fault_tree.py                # Fault Tree Analysis with AND/OR gates",
-    "│   │   ├── event_tree.py                # Event Tree Analysis",
-    "│   │   └── utility.py                   # Exponential utility, certainty equivalent",
-    "│   ├── decision_theory/",
-    "│   │   ├── decision_criteria.py         # Minimin, Minimax, Minimax Regret, EMV",
-    "│   │   ├── decision_tree.py             # Decision Tree rollback",
-    "│   │   ├── evpi.py                      # EVPI and EVSI",
-    "│   │   └── sensitivity.py               # Sensitivity Analysis",
-    "│   ├── probability/",
-    "│   │   └── probability_analysis.py      # Bayesian updating, Relative Risk, Odds Ratio",
-    "│   └── visualization/",
-    "│       ├── visualizations.py            # Core charts (ALE heatmap, EMV, regret)",
-    "│       ├── influence_diagram.py         # Influence Diagram",
-    "│       └── risk_profile.py              # Risk Profile charts",
-    "├── data/                                # Place creditcard.csv here (not tracked)",
-    "└── results/",
-    "    ├── tables/                          # Output CSV files",
-    "    └── figures/                         # Output PNG figures",
-    "```",
-    "",
-    "## Course",
-    "",
-    "INSE 6320 — Risk Analysis for Information and Systems Engineering",
-    "Concordia University, Montreal, Quebec, Canada",
-    "",
-    "## Author",
-    "",
-    "Ismail Mzouri — Student ID: 40335670",
-]
+# Fraud Detection Deployment Risk Analysis
 
-with open("README.md", "w", encoding="utf-8") as f:
-    f.write("\n".join(lines) + "\n")
+A comprehensive quantitative risk analysis of three fraud detection deployment strategies for a fintech company, using the Kaggle Credit Card Fraud Detection dataset.
 
-print("README.md created successfully")
+## Project Overview
+
+This project applies formal risk analysis methods to determine the optimal fraud detection system deployment strategy. All financial loss parameters are derived directly from real transaction amounts in the dataset — not assumed values.
+
+| Strategy | Model | Annual Cost |
+|----------|-------|-------------|
+| Advanced ML | XGBoost + SMOTE + threshold optimization | $800,000 |
+| Standard ML | Logistic Regression + SMOTE | $250,000 |
+| Rule-Based | Manual threshold rules | $0 |
+
+## Key Results
+
+All 4 decision criteria unanimously recommend **Advanced ML (XGBoost)**:
+
+| Criterion | Result |
+|-----------|--------|
+| Minimin | Advanced ML — $842,405 best case |
+| Minimax | Advanced ML — $1,054,427 worst case |
+| Minimax Regret | Advanced ML — $0 regret in every scenario |
+| EMV | Advanced ML — $990,820 expected annual cost |
+| EVPI | $0 — decision is fully robust |
+| Risk Premium | $1,437 — near-zero uncertainty |
+| Sensitivity | No breakeven found across full probability range |
+
+## Analyses Included
+
+- Quantitative Risk Analysis (SLE, ALE, ARO)
+- Influence Diagram
+- Decision Criteria (Minimin, Minimax, Minimax Regret, EMV)
+- EVPI and EVSI
+- Decision Tree
+- Risk Profiles
+- Sensitivity Analysis
+- Event Tree Analysis
+- Fault Tree Analysis (AND/OR gates, Birnbaum importance)
+- Risk Utility Analysis (exponential utility, certainty equivalent, risk premium)
+- Probability Analysis and Bayesian Updating
+
+## Dataset
+
+Download the Kaggle Credit Card Fraud Detection dataset and place it at `data/creditcard.csv`:
+
+https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+
+- 284,807 transactions over 2 days
+- 492 fraudulent transactions (0.173% fraud rate)
+- Features V1–V28 are PCA-transformed for privacy
+
+## Installation
+
+```bash
+pip install numpy pandas matplotlib seaborn scipy scikit-learn xgboost imbalanced-learn joblib
+```
+
+## Usage
+
+Run the full pipeline with a single command:
+
+```bash
+python main.py
+```
+
+This runs all 13 analysis phases and generates:
+- `results/tables/` — 13 CSV output tables
+- `results/figures/` — 15 PNG figures
+
+## Project Structure
+
+```
+fraud_risk_analysis/
+├── main.py                              # Master execution script (13 phases)
+├── src/
+│   ├── ml/
+│   │   └── train_models.py              # Train XGBoost, Logistic Regression, Rule-Based
+│   ├── risk_analysis/
+│   │   ├── quantitative.py              # SLE, ALE, ARO, payoff table
+│   │   ├── fault_tree.py                # Fault Tree Analysis with AND/OR gates
+│   │   ├── event_tree.py                # Event Tree Analysis
+│   │   └── utility.py                   # Exponential utility, certainty equivalent
+│   ├── decision_theory/
+│   │   ├── decision_criteria.py         # Minimin, Minimax, Minimax Regret, EMV
+│   │   ├── decision_tree.py             # Decision Tree rollback
+│   │   ├── evpi.py                      # EVPI and EVSI
+│   │   └── sensitivity.py               # Sensitivity Analysis
+│   ├── probability/
+│   │   └── probability_analysis.py      # Bayesian updating, Relative Risk, Odds Ratio
+│   └── visualization/
+│       ├── visualizations.py            # Core charts (ALE heatmap, EMV, regret)
+│       ├── influence_diagram.py         # Influence Diagram
+│       └── risk_profile.py              # Risk Profile charts
+├── data/                                # Place creditcard.csv here (not tracked)
+└── results/
+    ├── tables/                          # Output CSV files
+    └── figures/                         # Output PNG figures
+```
+
+## Course
+
+INSE 6320 — Risk Analysis for Information and Systems Engineering  
+Concordia University, Montreal, Quebec, Canada
+
+## Author
+
+Ismail Mzouri — Student ID: 40335670
